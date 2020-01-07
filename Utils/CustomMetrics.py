@@ -15,7 +15,7 @@ class CustomMetrics:
     return self.customCallback  
 
   #matthews_correlation
-  def mcor(y_true, y_pred):
+  def mcor(self, y_true, y_pred):
     y_pred_pos = K.round(K.clip(y_pred, 0, 1))
     y_pred_neg = 1 - y_pred_pos
 
@@ -33,26 +33,26 @@ class CustomMetrics:
 
     return numerator / (denominator + K.epsilon())
   
-  def precision(y_true, y_pred):
+  def precision(self, y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
     precision = true_positives / (predicted_positives + K.epsilon())
     return precision
   
-  def recall(y_true, y_pred):
+  def recall(self, y_true, y_pred):
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
     recall = true_positives / (possible_positives + K.epsilon())
     return recall
   
-  def f1(y_true, y_pred):
-    def recall(y_true, y_pred):
+  def f1(self, y_true, y_pred):
+    def recall(self, y_true, y_pred):
       true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
       possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
       recall = true_positives / (possible_positives + K.epsilon())
       return recall
     
-    def precision(y_true, y_pred):
+    def precision(self, y_true, y_pred):
       true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
       predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
       precision = true_positives / (predicted_positives + K.epsilon())
