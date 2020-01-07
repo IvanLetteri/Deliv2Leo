@@ -1,7 +1,19 @@
 class CustomMetrics:
-  empCount = 0
-  def __init__(self):
-    pass
+  def __init__(self, customCallback = ['accuracy']):
+    self.customCallback = ['accuracy']
+    
+  def setCallback(self, mattCorr, precision, fmeasure, recall):
+    if mattCorr:
+      self.customCallback.append('mattCorr')
+    if precision:
+      self.customCallback.append('precision')
+    if fmeasure:
+      self.customCallback.append('fmeasure')
+    if recall:
+      self.customCallback.append('recall')
+    
+    return self.customCallback  
+
   #matthews_correlation
   def mcor(y_true, y_pred):
     y_pred_pos = K.round(K.clip(y_pred, 0, 1))
