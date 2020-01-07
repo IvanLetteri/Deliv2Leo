@@ -1,9 +1,7 @@
 class CustomMetrics:
   empCount = 0
-  def __init__(self, param1, param2):
-    self.param1 = param1
-    self.param2 = param2
-   
+  def __init__(self):
+    pass
   #matthews_correlation
   def mcor(y_true, y_pred):
     y_pred_pos = K.round(K.clip(y_pred, 0, 1))
