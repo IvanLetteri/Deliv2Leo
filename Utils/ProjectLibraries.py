@@ -43,3 +43,5 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn import metrics
 from sklearn.metrics import roc_curve, auc, confusion_matrix
 
+class ProjectLibraries:
+  pass
