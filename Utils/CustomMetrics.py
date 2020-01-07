@@ -59,7 +59,7 @@ class CustomMetrics:
       precision = true_positives / (predicted_positives + K.epsilon())
       return precision
     
-    precision = precision(y_true, y_pred)
-    recall = recall(y_true, y_pred)
+    precision = precision(self, y_true, y_pred)
+    recall = recall(self, y_true, y_pred)
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
   
