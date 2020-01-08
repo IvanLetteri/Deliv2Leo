@@ -1,5 +1,6 @@
 tensorboard
 keras
+kerastuner
 h5py
 pandas-profiling
 grpcio>=1.24.3
