@@ -1,3 +1,6 @@
+from kerastuner import HyperModel
+from kerastuner.tuners import RandomSearch, Hyperband, BayesianOptimization
+
 class CustomHyperModel(HyperModel):
 
     def __init__(self, num_classes):
