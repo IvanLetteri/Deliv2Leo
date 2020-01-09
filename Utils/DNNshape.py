@@ -1,3 +1,4 @@
+import tensorflow as tf
 from keras.models import Sequential
 
 class DNNshape:
