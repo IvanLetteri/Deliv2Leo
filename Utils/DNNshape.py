@@ -1,5 +1,7 @@
+
+
 class DNNshape:
-  def create_model(inLayers=22, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
+  def create_model(self, inLayers=22, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
     model=tf.keras.models.Sequential()
     model.add(tf.keras.layers.Dense((inLayers*2), input_dim=(inLayers-outLayers), activation=actFunc))
     model.add(tf.keras.layers.Dropout(dropOut))
