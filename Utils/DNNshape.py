@@ -1,4 +1,4 @@
-
+from keras.models import Sequential
 
 class DNNshape:
   def create_model(self, inLayers=22, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
