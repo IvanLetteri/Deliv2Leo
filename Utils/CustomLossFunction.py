@@ -7,7 +7,7 @@ class CustomLossFunction:
 
     x = y_true - y_pred
     if np.isinf(clip_value):
-    return .5 * K.square(x)
+      return .5 * K.square(x)
 
     condition = K.abs(x) < clip_value
     squared_loss = .5 * K.square(x)
