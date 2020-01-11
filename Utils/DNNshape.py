@@ -1,5 +1,6 @@
 import tensorflow as tf
 from keras.models import Sequential
+from keras.layers import Dropout, BatchNormalization
 
 class DNNshape:
   def rect_dnn(self, inLayers=22, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
