@@ -23,7 +23,7 @@ class DNNshape:
   
   def diam_dnn(self, inLayers=22, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
     model=tf.keras.models.Sequential()
-    model.add(tf.keras.layers.Dense(((inLayers-outLayers)*2), input_dim=(inLayers-outLayers), activation))
+    model.add(tf.keras.layers.Dense(((inLayers-outLayers)*2), input_dim=(inLayers-outLayers)))
     model.add(tf.keras.layers.BatchNormalization())
     model.add(Activation(actFunc))
     model.add(tf.keras.layers.Dropout(dropOut))
