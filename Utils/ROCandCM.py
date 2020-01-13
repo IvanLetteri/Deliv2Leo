@@ -1,4 +1,5 @@
-from sklearn.metrics import confusion_matrix
+from sklearn import metrics
+from sklearn.metrics import roc_curve, auc, confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support as score
 
 class ROCandCM:
