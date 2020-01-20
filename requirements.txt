@@ -1,6 +1,4 @@
 tensorboard
 keras
-keras-tuner
 h5py
-PyYAML>=5.1
 grpcio>=1.24.3
