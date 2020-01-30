@@ -1,7 +1,7 @@
 import tensorflow as tf
 from keras.models import Sequential
 
-class DNNshapeNew:
+class DNNshape:
   def rect_dnn(self, inLayers=24, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
     model=tf.keras.models.Sequential()
     model.add(tf.keras.layers.Dense((inLayers*2)+1, input_dim=(inLayers), activation=actFunc))
