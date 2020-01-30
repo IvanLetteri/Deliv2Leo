@@ -5,11 +5,11 @@ class DNNshape:
   def rect_dnn(self, inLayers=24, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
     numINneurons = inLayers-outLayers
     model=tf.keras.models.Sequential()
-    model.add(tf.keras.layers.Dense(((numINneurons*2)+1), input_dim=numINneurons, activation=actFunc))
+    model.add(tf.keras.layers.Dense((numINneurons*2)+1, input_dim=numINneurons, activation=actFunc))
     model.add(tf.keras.layers.Dropout(dropOut))
 
     for i in range(0,numLayers):
-      model.add(tf.keras.layers.Dense((numINneurons*2)+1), kernel_initializer=kerInit, activation=actFunc))
+      model.add(tf.keras.layers.Dense((numINneurons*2)+1), kernel_initializer=kerInit, activation=actFunc)
       model.add(tf.keras.layers.Dropout(dropOut))
 
     model.add(tf.keras.layers.Dense(outLayers, kernel_initializer=kerInit, activation=outActFunc))
@@ -18,7 +18,7 @@ class DNNshape:
   def diam_dnn(self, inLayers=24, outLayers=2, numLayers=2, actFunc='relu', kerInit='normal', dropOut=0.2, outActFunc='softmax', multFactor=1):
     numINneurons = inLayers-outLayers
     model=tf.keras.models.Sequential()
-    model.add(tf.keras.layers.Dense((numINneurons*2)+1), input_dim=numINneurons, activation=actFunc))
+    model.add(tf.keras.layers.Dense((numINneurons*2)+1, input_dim=numINneurons, activation=actFunc))
     model.add(tf.keras.layers.Dropout(dropOut))
 
     for i in range(0,numLayers):
